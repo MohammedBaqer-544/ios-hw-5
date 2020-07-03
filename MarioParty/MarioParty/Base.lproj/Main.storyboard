@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,94 +15,157 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarioParty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="MarioParty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="MarioPartyBG" translatesAutoresizingMaskIntoConstraints="NO" id="ddH-4q-ki8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="MarioPartyBG" translatesAutoresizingMaskIntoConstraints="NO" id="ddH-4q-ki8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pu0-wM-2XI">
-                                <rect key="frame" x="132" y="526" width="167" height="272"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pu0-wM-2XI">
+                                <rect key="frame" x="104" y="416" width="167" height="272"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6W0-9c-pl5">
-                                <rect key="frame" x="349" y="851" width="50" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ys3-GH-bY0">
+                                <rect key="frame" x="104" y="693" width="167" height="85"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="Dlx-tU-ysQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <state key="normal" title="اضغط      السهم">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B06-jC-VHD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6W0-9c-pl5">
+                                <rect key="frame" x="317" y="717" width="42" height="37"/>
                                 <state key="normal" image="next"/>
                                 <connections>
                                     <segue destination="moA-X3-dsJ" kind="presentation" id="a6M-zL-SdF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ys3-GH-bY0">
-                                <rect key="frame" x="159" y="810" width="115" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="اضغط      السهم">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6W0-9c-pl5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="29o-ki-tnd"/>
+                            <constraint firstItem="pu0-wM-2XI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="2so-eX-o1e"/>
+                            <constraint firstItem="ddH-4q-ki8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6gX-Ha-Due"/>
+                            <constraint firstItem="6W0-9c-pl5" firstAttribute="leading" secondItem="Ys3-GH-bY0" secondAttribute="trailing" constant="46" id="7Zf-SQ-ILh"/>
+                            <constraint firstItem="pu0-wM-2XI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="372" id="D3g-GD-CDG"/>
+                            <constraint firstItem="Ys3-GH-bY0" firstAttribute="centerX" secondItem="ddH-4q-ki8" secondAttribute="centerX" id="G6S-fs-aBu"/>
+                            <constraint firstItem="ddH-4q-ki8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="dgS-IW-VZ8"/>
+                            <constraint firstItem="Ys3-GH-bY0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fG4-9i-d3h"/>
+                            <constraint firstItem="Ys3-GH-bY0" firstAttribute="top" secondItem="pu0-wM-2XI" secondAttribute="bottom" constant="5" id="h1f-eI-rAJ"/>
+                            <constraint firstItem="pu0-wM-2XI" firstAttribute="centerX" secondItem="Ys3-GH-bY0" secondAttribute="centerX" id="hou-jF-qZv"/>
+                            <constraint firstItem="Ys3-GH-bY0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jGH-VL-8Bp"/>
+                            <constraint firstItem="6W0-9c-pl5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="673" id="jrD-jN-wKj"/>
+                            <constraint firstItem="Ys3-GH-bY0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oIw-D2-qbn"/>
+                            <constraint firstItem="6W0-9c-pl5" firstAttribute="centerY" secondItem="Ys3-GH-bY0" secondAttribute="centerY" id="oUs-Cm-qIP"/>
+                            <constraint firstItem="Ys3-GH-bY0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pu0-wM-2XI" secondAttribute="trailing" id="oqw-YM-4GW"/>
+                            <constraint firstItem="ddH-4q-ki8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xfZ-nz-SaL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="playerImageView" destination="pu0-wM-2XI" id="iU2-Sj-00d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="136.80000000000001" y="137.4384236453202"/>
         </scene>
-        <!--View Controller-->
+        <!--Player DetailsVC-->
         <scene sceneID="sqe-Yj-qk9">
             <objects>
-                <viewController id="moA-X3-dsJ" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="moA-X3-dsJ" customClass="PlayerDetailsVC" customModule="MarioParty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c6m-oi-LVs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MarioBG" translatesAutoresizingMaskIntoConstraints="NO" id="mbv-bF-p2C">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzQ-AF-OFT">
-                                <rect key="frame" x="90" y="147" width="235" height="415"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIa-Xw-NmJ">
-                                <rect key="frame" x="143" y="45" width="141" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIa-Xw-NmJ">
+                                <rect key="frame" x="147.66666666666666" y="48" width="79.666666666666657" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="CVK-ye-VkX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SuperMarioGalaxy" family="Super Mario 256" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEH-Jf-Cx3">
-                                <rect key="frame" x="171" y="670" width="72" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="dice"/>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1fO-jb-TIe">
-                                <rect key="frame" x="90" y="570" width="235" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZG-MM-prh">
-                                <rect key="frame" x="361" y="14" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZG-MM-prh">
+                                <rect key="frame" x="311.66666666666669" y="20" width="47.333333333333314" height="40"/>
                                 <state key="normal" image="music"/>
+                                <connections>
+                                    <action selector="playCharactarMusic:" destination="moA-X3-dsJ" eventType="touchUpInside" id="e26-dF-SOJ"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jzQ-AF-OFT">
+                                <rect key="frame" x="70" y="139" width="235" height="415"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEH-Jf-Cx3">
+                                <rect key="frame" x="151" y="662" width="73" height="62"/>
+                                <state key="normal" image="dice"/>
+                                <connections>
+                                    <action selector="randomizeStars:" destination="moA-X3-dsJ" eventType="touchUpInside" id="QzA-B4-qbn"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1fO-jb-TIe">
+                                <rect key="frame" x="70" y="562" width="235" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="ou8-xg-sS2"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MarioBG" translatesAutoresizingMaskIntoConstraints="NO" id="mbv-bF-p2C">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1fO-jb-TIe" secondAttribute="bottom" constant="104" id="0k2-CT-nGz"/>
+                            <constraint firstItem="mbv-bF-p2C" firstAttribute="top" secondItem="B8z-nN-jML" secondAttribute="top" id="1nY-J0-i0a"/>
+                            <constraint firstItem="jzQ-AF-OFT" firstAttribute="top" secondItem="zIa-Xw-NmJ" secondAttribute="bottom" constant="17" id="9MU-Wn-jN4"/>
+                            <constraint firstItem="XEH-Jf-Cx3" firstAttribute="centerX" secondItem="1fO-jb-TIe" secondAttribute="centerX" id="9VK-gg-ieJ"/>
+                            <constraint firstItem="zIa-Xw-NmJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="B8z-nN-jML" secondAttribute="leading" id="E1g-nb-jhz"/>
+                            <constraint firstItem="kZG-MM-prh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zIa-Xw-NmJ" secondAttribute="trailing" id="GJb-Gt-2LV"/>
+                            <constraint firstItem="1fO-jb-TIe" firstAttribute="leading" secondItem="B8z-nN-jML" secondAttribute="leading" constant="70" id="O8s-fk-iw9"/>
+                            <constraint firstItem="zIa-Xw-NmJ" firstAttribute="centerX" secondItem="jzQ-AF-OFT" secondAttribute="centerX" id="PAn-cA-pox"/>
+                            <constraint firstItem="zIa-Xw-NmJ" firstAttribute="centerX" secondItem="mbv-bF-p2C" secondAttribute="centerX" id="QKM-i9-z9e"/>
+                            <constraint firstItem="B8z-nN-jML" firstAttribute="bottom" secondItem="kZG-MM-prh" secondAttribute="bottom" constant="664" id="Ujp-uw-n4d"/>
+                            <constraint firstItem="kZG-MM-prh" firstAttribute="top" secondItem="B8z-nN-jML" secondAttribute="top" constant="20" id="VSO-jI-VhK"/>
+                            <constraint firstItem="mbv-bF-p2C" firstAttribute="centerY" secondItem="c6m-oi-LVs" secondAttribute="centerY" id="WQC-N7-JHx"/>
+                            <constraint firstItem="mbv-bF-p2C" firstAttribute="centerX" secondItem="1fO-jb-TIe" secondAttribute="centerX" id="WUv-WY-Rlv"/>
+                            <constraint firstItem="zIa-Xw-NmJ" firstAttribute="centerX" secondItem="1fO-jb-TIe" secondAttribute="centerX" id="XMa-gH-bGz"/>
+                            <constraint firstItem="kZG-MM-prh" firstAttribute="leading" secondItem="zIa-Xw-NmJ" secondAttribute="trailing" constant="84.333333333333343" id="bHi-d2-bTK"/>
+                            <constraint firstItem="1fO-jb-TIe" firstAttribute="top" secondItem="jzQ-AF-OFT" secondAttribute="bottom" constant="8" id="cEb-m1-xp4"/>
+                            <constraint firstItem="mbv-bF-p2C" firstAttribute="leading" secondItem="B8z-nN-jML" secondAttribute="leading" id="eJm-wb-Wit"/>
+                            <constraint firstItem="XEH-Jf-Cx3" firstAttribute="leading" secondItem="B8z-nN-jML" secondAttribute="leading" constant="151" id="f0i-me-Uf5"/>
+                            <constraint firstItem="mbv-bF-p2C" firstAttribute="centerX" secondItem="jzQ-AF-OFT" secondAttribute="centerX" id="hXM-eC-i1f"/>
+                            <constraint firstItem="zIa-Xw-NmJ" firstAttribute="centerX" secondItem="c6m-oi-LVs" secondAttribute="centerX" id="l3b-aj-DQs"/>
+                            <constraint firstItem="1fO-jb-TIe" firstAttribute="leading" secondItem="jzQ-AF-OFT" secondAttribute="leading" id="muo-Zc-k8d"/>
+                            <constraint firstItem="XEH-Jf-Cx3" firstAttribute="bottom" secondItem="B8z-nN-jML" secondAttribute="bottom" id="nGF-BQ-V72"/>
+                            <constraint firstItem="zIa-Xw-NmJ" firstAttribute="top" secondItem="B8z-nN-jML" secondAttribute="top" constant="48" id="thh-XX-6nI"/>
+                            <constraint firstItem="XEH-Jf-Cx3" firstAttribute="top" secondItem="1fO-jb-TIe" secondAttribute="bottom" constant="8" id="vHd-ej-PjG"/>
+                            <constraint firstItem="kZG-MM-prh" firstAttribute="trailing" secondItem="c6m-oi-LVs" secondAttribute="trailingMargin" id="vaI-Dw-MTj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="B8z-nN-jML"/>
                     </view>
+                    <connections>
+                        <outlet property="bgImageView" destination="mbv-bF-p2C" id="LR2-Fr-Wgg"/>
+                        <outlet property="imageView" destination="jzQ-AF-OFT" id="zpq-rl-kRC"/>
+                        <outlet property="nameLable" destination="zIa-Xw-NmJ" id="4xB-oe-5FA"/>
+                        <outlet property="starsImageView" destination="1fO-jb-TIe" id="nZn-3I-C7o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GkX-3e-R6f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884" y="138"/>
+            <point key="canvasLocation" x="884" y="137.4384236453202"/>
         </scene>
     </scenes>
     <resources>
         <image name="MarioBG" width="414" height="896"/>
-        <image name="MarioPartyBG" width="1440" height="2560"/>
+        <image name="MarioPartyBG" width="414" height="654"/>
         <image name="dice" width="455" height="398"/>
         <image name="music" width="53" height="57"/>
         <image name="next" width="133" height="105"/>
